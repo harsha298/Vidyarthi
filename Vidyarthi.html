@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenwood High School</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: transparent; /* Remove background color */
+
+            color: white;
+            padding: 20px 0; /* Adjusted padding for better visibility */
+            background-image: url('images/School.jpg'); /* Adding the background image */
+            background-size: cover; /* Ensures the image covers the entire header */
+
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+        }
+        #gallery img {
+            width: 100%; /* Makes images responsive */
+            max-width: 300px; /* Limits maximum width */
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 0; /* Adjust padding for smaller screens */
+            }
+            nav ul li {
+                display: block; /* Stack navigation items */
+                margin: 5px 0; /* Adjust margin */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Greenwood High School</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Our School</h2>
+        <p>Greenwood High School is a leading institution dedicated to academic excellence and holistic development of students. We offer top-notch facilities, experienced faculty, and a nurturing environment for students to grow and succeed.</p>
+    </section>
+    
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Explore our vibrant campus and engaging student activities.</p>
+        <img src="images/school.jpg" alt="School Building">
+        <img src="images/student.jpeg" alt="Classroom">
+        <img src="images/sportss.jpeg" alt="Sports Ground">
+        <img src="images/images.jpeg" alt="Students">
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@greenwoodhigh.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Green Street, Education City, USA</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Greenwood High School. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling functionality
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

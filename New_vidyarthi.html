@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenwood High School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-700 text-white py-4 shadow-md">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Vidyarthi High School</h1>
+            <nav class="mt-2">
+                <ul class="flex justify-center space-x-6">
+                    <li><a href="#about" class="hover:underline">About</a></li>
+                    <li><a href="#vision" class="hover:underline">Vision & Mission</a></li>
+                    <li><a href="#programs" class="hover:underline">Academic Programs</a></li>
+                    <li><a href="#admissions" class="hover:underline">Admissions</a></li>
+                    <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+                    <li><a href="#testimonials" class="hover:underline">Testimonials</a></li>
+                    <li><a href="#contact" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="hero" class="slideshow-container">
+        <img src="images/school-building.jpg" class="slide active" alt="School Building">
+        <img src="images/classroom.jpeg" class="slide" alt="Classroom">
+        <img src="images/sports-ground.jpeg" class="slide" alt="Sports Ground">
+        <img src="images/library.jpeg" class="slide" alt="Library">
+    </section>
+
+    <section id="vision" class="p-8 bg-white shadow-md mt-4 container mx-auto text-center">
+        <h2 class="text-2xl font-semibold">Our Vision & Mission</h2>
+        <p class="mt-2 text-gray-600">Our mission is to provide a nurturing environment for academic excellence and character development. We strive to empower students with knowledge and skills for a brighter future.</p>
+    </section>
+    
+    <section id="programs" class="p-8 bg-gray-200 shadow-md mt-4 container mx-auto text-center">
+        <h2 class="text-2xl font-semibold">Academic Programs</h2>
+        <p class="mt-2 text-gray-700">We offer a variety of programs, including Science, Mathematics, Humanities, and Sports, to foster holistic development.</p>
+    </section>
+    
+    <section id="admissions" class="p-8 bg-white shadow-md mt-4 container mx-auto text-center">
+        <h2 class="text-2xl font-semibold">Admissions</h2>
+        <p class="mt-2 text-gray-600">Admissions are open for the upcoming academic year. Contact us for details on the application process and eligibility criteria.</p>
+    </section>
+    
+    <section id="gallery" class="p-8 mt-4 container mx-auto text-center">
+        <h2 class="text-2xl font-semibold">Gallery</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+            <img src="images/classroom.jpeg" class="rounded shadow-md" alt="Classroom">
+            <img src="images/sports-ground.jpeg" class="rounded shadow-md" alt="Sports Ground">
+            <img src="images/library.jpeg" class="rounded shadow-md" alt="Library">
+            <img src="images/school-building    .jpg" class="rounded shadow-md" alt="Auditorium">
+        </div>
+    </section>
+    
+    <section id="testimonials" class="p-8 bg-gray-200 shadow-md mt-4 container mx-auto text-center">
+        <h2 class="text-2xl font-semibold">Testimonials</h2>
+        <p class="mt-2 text-gray-700 italic">"Greenwood High School has been a wonderful place for our children. The faculty and staff are exceptional!" - Parent</p>
+        <p class="mt-2 text-gray-700 italic">"I love my school! The teachers encourage us to think creatively and work hard." - Student</p>
+    </section>
+    
+    <section id="contact" class="p-8 bg-white shadow-md mt-4 container mx-auto text-center">
+        <h2 class="text-2xl font-semibold">Contact Us</h2>
+        <p class="text-gray-700 mt-2">Email: info@greenwoodhigh.com</p>
+        <p class="text-gray-700">Phone: +123 456 7890</p>
+        <p class="text-gray-700">Address: 123 Green Street, Education City, USA</p>
+    </section>
+    
+    <footer class="bg-blue-700 text-white text-center py-4 mt-4">
+        <p>&copy; 2025 Greenwood High School. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => slide.classList.remove("active"));
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add("active");
+            setTimeout(showSlides, 5000);
+        }
+        showSlides();
+    </script>
+</body>
+</html>
